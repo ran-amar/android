@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentApp">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.fragmetapp.FragmentOne"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.example.fragmetapp.FragmentRegister"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentApp"
+            app:destination="@id/fragmentApp" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.fragmetapp.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentApp"
+            app:destination="@id/fragmentApp" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentApp"
+        android:name="com.example.fragmetapp.FragmentApp"
+        android:label="fragment_app"
+        tools:layout="@layout/fragment_app" />
+</navigation>
